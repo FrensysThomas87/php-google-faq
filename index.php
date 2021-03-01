@@ -96,15 +96,23 @@ $faqAnswers = [
      <link rel="stylesheet" href="dist/app.css">
    </head>
    <body>
+     <header>
+       <img src="img/googlelogo.png" alt="">
+       <span>Privacy e termini</span>
+       <nav>
+         <ul>
+           <li>Introduzione</li>
+           <li>Norme sulla privacy</li>
+           <li>Termini di servizio</li>
+           <li>Tecnologie</li>
+           <li>Domande frequenti</li>
+         </ul>
+       </nav>
+     </header>
      <div class="container">
        <?php
        foreach ($faqAnswers as $key => $value) {
-         // echo $value['faq'] ;
-         // echo '</br>';
-         // echo $value['answer'];
-         // echo '</br>';
-
-        ?>
+         ?>
 
         <h2><?php echo $value['faq'] ;
         echo '</br>';  ?></h2>
