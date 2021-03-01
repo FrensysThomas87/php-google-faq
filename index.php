@@ -3,7 +3,7 @@ $faqAnswers = [
   [
     "faq" => "Come state implementando la recente decisione della Corte di giustizia dell'Unione europea (CGUE) relativa al diritto all'oblio?",
 
-    "answer" => "La recente decisione della Corte di giustizia dell'Unione europea ha profonde conseguenze per i motori di ricerca in Europa. La Corte ha stabilito che alcuni utenti hanno il diritto di chiedere ai motori di ricerca come Google di rimuovere risultati relativi a chiavi di ricerca che includono il proprio nome. Per poter essere rimossi, i risultati visualizzati devono essere inadeguati, irrilevanti o non più rilevanti, o eccessivi.
+    "answer" => "La recente decisione della Corte di giustizia dell'Unione europea ha profonde conseguenze per i motori di ricerca in Europa. La Corte ha stabilito che alcuni utenti hanno il diritto di chiedere ai motori di ricerca come Google di rimuovere risultati relativi a chiavi di ricerca che includono il proprio nome. Per poter essere rimossi, i risultati visualizzati devono essere inadeguati, irrilevanti o non più rilevanti, o eccessivi .
 
                   Da quando questa decisione è stata pubblicata il 13 maggio 2014, abbiamo lavorato incessantemente per uniformarci a essa. Si tratta di una procedura complessa perché dobbiamo valutare ogni singola richiesta e effettuare un bilanciamento tra il diritto dell'individuo a controllare i suoi dati personali ed il diritto di tutti di conoscere e distribuire le informazioni.
 
@@ -31,7 +31,7 @@ $faqAnswers = [
 
     "answer" => "Il tuo account è associato a un paese (o territorio) nei Termini di servizio per poter stabilire due cose:
 
-                La società consociata Google che offre i servizi, tratta le tue informazioni ed è responsabile del rispetto delle leggi sulla privacy vigenti. Generalmente Google offre i propri servizi per i consumatori tramite una delle due società seguenti:
+              1.  La società consociata Google che offre i servizi, tratta le tue informazioni ed è responsabile del rispetto delle leggi sulla privacy vigenti. Generalmente Google offre i propri servizi per i consumatori tramite una delle due società seguenti:
                 Google Ireland Limited, se gli utenti sono residenti nello Spazio economico europeo (paesi dell'Unione europea, oltre a Islanda, Liechtenstein e Norvegia) o in Svizzera.
                 Google LLC, con sede negli Stati Uniti, per il resto del mondo.
                 La versione dei termini che regola il nostro rapporto, che può variare in base alle leggi locali.
@@ -79,12 +79,13 @@ $faqAnswers = [
   ]
 ];
 
-// foreach ($faqAnswers as $key => $value) {
-//   echo $value['faq'] ;
-//   echo '</br>';
-//   echo $value['answer'];
-//   echo '</br>';
-// }
+foreach ($faqAnswers as $key => $value) {
+  $exploded = explode('.' , $value['answer']);
+  var_dump($exploded);
+}
+
+
+
 
  ?>
 
@@ -122,8 +123,12 @@ $faqAnswers = [
 
 
         <?php
+
          }
          ?>
      </div>
    </body>
  </html>
+
+ <!-- $exploded = explode('.' , $value['answer']);
+ var_dump($exploded); -->
