@@ -31,7 +31,7 @@ $faqAnswers = [
 
     "answer" => "Il tuo account è associato a un paese (o territorio) nei Termini di servizio per poter stabilire due cose:
 
-              1.  La società consociata Google che offre i servizi, tratta le tue informazioni ed è responsabile del rispetto delle leggi sulla privacy vigenti. Generalmente Google offre i propri servizi per i consumatori tramite una delle due società seguenti:
+                La società consociata Google che offre i servizi, tratta le tue informazioni ed è responsabile del rispetto delle leggi sulla privacy vigenti. Generalmente Google offre i propri servizi per i consumatori tramite una delle due società seguenti:
                 Google Ireland Limited, se gli utenti sono residenti nello Spazio economico europeo (paesi dell'Unione europea, oltre a Islanda, Liechtenstein e Norvegia) o in Svizzera.
                 Google LLC, con sede negli Stati Uniti, per il resto del mondo.
                 La versione dei termini che regola il nostro rapporto, che può variare in base alle leggi locali.
@@ -79,10 +79,6 @@ $faqAnswers = [
   ]
 ];
 
-foreach ($faqAnswers as $key => $value) {
-  $exploded = explode('.' , $value['answer']);
-  var_dump($exploded);
-}
 
 
 
@@ -113,12 +109,13 @@ foreach ($faqAnswers as $key => $value) {
      <div class="container">
        <?php
        foreach ($faqAnswers as $key => $value) {
+         $faqAnswers =  str_replace('.' , '.<br/>', $value['answer']);
          ?>
 
         <h2><?php echo $value['faq'] ;
         echo '</br>';  ?></h2>
 
-        <p><?php  echo $value['answer'];
+        <p><?php  echo  $faqAnswers . '.';
          echo '</br>'; ?></p>
 
 
