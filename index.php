@@ -109,13 +109,13 @@ $faqAnswers = [
      <div class="container">
        <?php
        foreach ($faqAnswers as $key => $value) {
-         $faqAnswers =  str_replace('.' , '.<br/><br/>', $value['answer']);
+         $newAnswer =  str_replace('.' , '.<br/><br/>', $value['answer']);
          ?>
 
         <h2><?php echo $value['faq'] ;
         echo '</br>';  ?></h2>
 
-        <p><?php  echo  $faqAnswers . '.';
+        <p><?php  echo  $newAnswer . '.';
          echo '</br>'; ?></p>
 
 
