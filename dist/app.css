@@ -13,9 +13,15 @@ header {
   z-index: 9;
   background-color: #fff;
 }
-header img {
+header > img {
   vertical-align: middle;
   margin-right: 7px;
+}
+header img:last-child {
+  position: absolute;
+  top: 20px;
+  right: 52px;
+  border-radius: 50%;
 }
 header span {
   font-size: 25px;

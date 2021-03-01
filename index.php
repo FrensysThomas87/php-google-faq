@@ -120,7 +120,9 @@ $faqAnswers = [
            <li>Domande frequenti</li>
          </ul>
        </nav>
+       <img src="img/unnamed.png" alt="">
      </header>
+
      <div class="container">
        <?php
        foreach ($faqAnswers as $key => $value) {

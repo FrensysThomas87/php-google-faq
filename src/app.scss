@@ -17,9 +17,16 @@ header{
   background-color: #fff;
 
 
-  img{
+  >img{
     vertical-align: middle;
     margin-right: 7px;
+  }
+
+  img:last-child{
+    position: absolute;
+    top: 20px;
+    right: 52px;
+    border-radius: 50%;
   }
 
   span{
